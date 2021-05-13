@@ -1,6 +1,10 @@
 const styles = (theme) => ({
   listItem: {
+    backgroundColor: "#f6f8f9",
     cursor: "pointer",
+    "&:hover": {
+      backgroundColor: "#eee",
+    },
   },
   textSection: {
     maxWidth: "85%",

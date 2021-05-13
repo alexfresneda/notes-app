@@ -14,7 +14,7 @@ class SidebarComponent extends React.Component {
     const { notes, classes, selectedNoteIndex } = this.props;
     if (notes) {
       return (
-        <div className={classes.sideBarContainer}>
+        <div className={classes.sidebarContainer}>
           <Button onClick={this.newNote} className={classes.newNoteBtn}>
             New Note
           </Button>

@@ -9,18 +9,19 @@ const styles = (theme) => ({
   },
   newNoteBtn: {
     width: "100%",
-    height: "35px",
-    borderBottom: "1px solid black",
+    height: "50px",
+    // borderBottom: "1px solid black",
     borderRadius: "0px",
-    backgroundColor: "#29487d",
+    backgroundColor: "#2F80ED",
     color: "white",
     "&:hover": {
       backgroundColor: "#88a2ce",
     },
   },
   sidebarContainer: {
+    backgroundColor: "#f6f8f9",
     marginTop: "0px",
-    width: "300px",
+    width: "400px",
     height: "100%",
     boxSizing: "border-box",
     float: "left",
