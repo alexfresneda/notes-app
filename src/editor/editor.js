@@ -58,7 +58,7 @@ class EditorComponent extends React.Component {
       title: this.state.title,
       body: this.state.body,
     });
-  }, 200);
+  }, 1500);
 }
 
 export default withStyles(styles)(EditorComponent);
