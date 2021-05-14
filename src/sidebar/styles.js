@@ -12,10 +12,10 @@ const styles = (theme) => ({
     height: "50px",
     // borderBottom: "1px solid black",
     borderRadius: "0px",
-    backgroundColor: "#2F80ED",
+    backgroundColor: "#2667C5",
     color: "white",
     "&:hover": {
-      backgroundColor: "#88a2ce",
+      backgroundColor: "#1151AD",
     },
   },
   sidebarContainer: {

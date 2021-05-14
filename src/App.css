@@ -26,10 +26,17 @@ body {
   box-sizing: border-box;
   height: calc(100% - 42px);
   overflow-y: scroll;
+  border: none !important;
 }
 .ql-editor {
   cursor: text;
+  border: none !important;
 }
+
+.ql-toolbar.ql-snow {
+  border: none !important;
+}
+
 .MuiListItem-root.Mui-selected {
   background-color: #d4d8e8 !important;
 }
