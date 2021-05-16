@@ -37,7 +37,7 @@ body {
 @media (prefers-color-scheme: dark) {
   .app-container {
     color: #ccc;
-    background-color: #111;
+    background-color: #1c1c1c;
   }
   .MuiListItem-root.Mui-selected {
     background-color: #292929 !important;
@@ -47,7 +47,7 @@ body {
 @media (prefers-color-scheme: light) {
   .app-container {
     background-color: #fff;
-    color: #000;
+    color: #333;
   }
   .MuiListItem-root.Mui-selected {
     background-color: #e3e7e9 !important;
@@ -56,6 +56,7 @@ body {
 
 .ql-toolbar.ql-snow {
   border: none !important;
+  opacity: 0;
 }
 
 .no-note-selected {

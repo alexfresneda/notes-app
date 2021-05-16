@@ -1,9 +1,13 @@
 import React from "react";
+import Quill from "quill";
 import ReactQuill from "react-quill";
 import debounce from "../helpers";
 import BorderColorIcon from "@material-ui/icons/BorderColor";
 import { withStyles } from "@material-ui/core/styles";
 import styles from "./styles";
+import MarkdownShortcuts from "quill-markdown-shortcuts";
+
+Quill.register("modules/markdownShortcuts", MarkdownShortcuts);
 
 class EditorComponent extends React.Component {
   constructor() {
@@ -14,6 +18,11 @@ class EditorComponent extends React.Component {
       id: "",
     };
   }
+
+  modules = {
+    markdownShortcuts: {},
+  };
+
   componentDidMount = () => {
     this.setState({
       body: this.props.selectedNote.body,
@@ -40,7 +49,11 @@ class EditorComponent extends React.Component {
           value={this.state.title ? this.state.title : ""}
           onChange={(e) => this.updateTitle(e.target.value)}
         ></input>
-        <ReactQuill value={this.state.body} onChange={this.updateBody} />
+        <ReactQuill
+          value={this.state.body}
+          onChange={this.updateBody}
+          modules={this.modules}
+        />
       </div>
     );
   }

@@ -32,6 +32,7 @@ class SidebarItemComponent extends React.Component {
                   {_note.title}
                 </Typography>
               }
+              // secondary={removeHTMLTags(_note.title.substring(0, 25))}
             />
             {/* <ListItemText
               classes={{ primary: "'your class'" }}
