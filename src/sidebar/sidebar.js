@@ -5,6 +5,7 @@ import "./styles.css";
 import List from "@material-ui/core/List";
 import { Divider, Button } from "@material-ui/core";
 import SidebarItemComponent from "../sidebaritem/sidebaritem";
+import AddCircleOutlineIcon from "@material-ui/icons/AddCircleOutline";
 
 class SidebarComponent extends React.Component {
   constructor() {
@@ -16,9 +17,11 @@ class SidebarComponent extends React.Component {
     if (notes) {
       return (
         <div className="sidebarContainer">
-          <div className="newNoteBtn">
-            <Button onClick={this.newNote}>add</Button>
-          </div>
+          <AddCircleOutlineIcon
+            onClick={this.newNote}
+            className="addIcon"
+          ></AddCircleOutlineIcon>
+
           <List>
             {notes.map((_note, _index) => {
               return (

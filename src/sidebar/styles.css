@@ -60,10 +60,12 @@
   width: 300px;
   box-shadow: 0px 0px 2px black;
 }
-.newNoteBtn {
+.addIcon {
+  cursor: pointer;
   margin: 16px 0px 0px 16px;
   width: 64px;
   border-radius: 4px;
+  color: #888;
 }
 .sidebarContainer {
   margin-top: 0px;
@@ -86,8 +88,8 @@
     background-color: #212121;
   }
 
-  .newNoteBtn {
-    background-color: #666;
+  .addIcon:hover {
+    color: #aaa;
   }
 }
 
@@ -97,7 +99,7 @@
     color: #000;
   }
 
-  .newNoteBtn {
-    background-color: #e3e7e9;
+  .addIcon:hover {
+    color: #555;
   }
 }

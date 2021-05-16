@@ -21,6 +21,7 @@ class EditorComponent extends React.Component {
 
   modules = {
     markdownShortcuts: {},
+    toolbar: false,
   };
 
   componentDidMount = () => {

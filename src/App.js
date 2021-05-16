@@ -3,6 +3,8 @@ import "./App.css";
 import SidebarComponent from "./sidebar/sidebar";
 import EditorComponent from "./editor/editor";
 import { firebase } from "@firebase/app";
+import Protect from "react-app-protect";
+import "react-app-protect/dist/index.css";
 
 class App extends React.Component {
   constructor() {
@@ -15,24 +17,31 @@ class App extends React.Component {
   }
   render() {
     return (
-      <div className="app-container">
-        <SidebarComponent
-          selectedNoteIndex={this.state.selectedNoteIndex}
-          notes={this.state.notes}
-          selectNote={this.selectNote}
-          deleteNote={this.deleteNote}
-          newNote={this.newNote}
-        />
-
-        {this.state.selectedNote ? (
-          <EditorComponent
-            selectedNote={this.state.selectedNote}
+      // <Protect sha512="test">
+      <Protect
+        sha512="98d62f2e743bcf4d2f7a7f11051331bcb7fb6af08804f638bbda9bebe8e564ed43bda58cbb39527f4c46ccdaf8bdf5a9368dcb4526272bdfa426411f22889ec0"
+        boxTitle="Log in"
+        wrapperClass="app-container"
+      >
+        <div className="app-container">
+          <SidebarComponent
             selectedNoteIndex={this.state.selectedNoteIndex}
             notes={this.state.notes}
-            noteUpdate={this.noteUpdate}
+            selectNote={this.selectNote}
+            deleteNote={this.deleteNote}
+            newNote={this.newNote}
           />
-        ) : null}
-      </div>
+
+          {this.state.selectedNote ? (
+            <EditorComponent
+              selectedNote={this.state.selectedNote}
+              selectedNoteIndex={this.state.selectedNoteIndex}
+              notes={this.state.notes}
+              noteUpdate={this.noteUpdate}
+            />
+          ) : null}
+        </div>
+      </Protect>
     );
   }
 
