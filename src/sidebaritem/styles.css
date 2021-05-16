@@ -1,0 +1,74 @@
+/* // const styles = (theme) => ({
+//   listItem: {
+//     backgroundColor: "#f6f8f9",
+
+//     cursor: "pointer",
+//     "&:hover": {
+//       backgroundColor: "#ECF0F1",
+//     },
+//   },
+//   textSection: {
+//     maxWidth: "85%",
+//     marginTop: "-7px",
+//     marginBottom: "-7px",
+//     fontWeight: "700",
+//   },
+//   deleteIcon: {
+//     position: "absolute",
+//     right: "5px",
+//     top: "calc(50% - 12px)",
+//     opacity: "0",
+//     "&:hover": {
+//       opacity: "1",
+//       color: "red",
+//     },
+//   },
+// });
+
+// export default styles; */
+
+.listItem {
+  cursor: pointer;
+  /* "&:hover": {
+    backgroundColor: "#ECF0F1",
+  }, */
+}
+.textSection {
+  max-width: 85%;
+  margin-top: -7px;
+  margin-bottom: -7px;
+  font-weight: 700;
+}
+.deleteIcon {
+  position: absolute;
+  right: 5px;
+  top: calc(50% - 12px);
+  opacity: 0;
+}
+.deleteIcon:hover {
+  opacity: 1;
+  color: #ff453a;
+}
+.textColor {
+  color: white;
+}
+
+@media (prefers-color-scheme: dark) {
+  .listItem {
+    background-color: #212121;
+  }
+
+  .listItem:hover {
+    background-color: #252525;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .listItem {
+    background-color: #f6f8f9;
+  }
+
+  .listItem:hover {
+    background-color: #ecf0f1;
+  }
+}

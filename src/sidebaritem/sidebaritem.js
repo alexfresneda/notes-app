@@ -1,8 +1,9 @@
 import React from "react";
 import { withStyles } from "@material-ui/core/styles";
-import styles from "./styles";
+import "./styles.css";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
+import Typography from "@material-ui/core/Typography";
 import DeleteIcon from "@material-ui/icons/Delete";
 import { removeHTMLTags } from "../helpers";
 
@@ -16,22 +17,31 @@ class SidebarItemComponent extends React.Component {
     return (
       <div key={_index}>
         <ListItem
-          className={classes.listItem}
+          className="listItem"
           selected={selectedNoteIndex === _index}
           alignItems="flex-start"
         >
           <div
-            className={classes.textSection}
+            className="textSection"
             onClick={() => this.selectNote(_note, _index)}
           >
             <ListItemText
-              primary={_note.title}
-              secondary={removeHTMLTags(_note.body.substring(0, 30)) + "..."}
-            ></ListItemText>
+              disableTypography
+              secondary={
+                <Typography type="body2" style={{ color: "#888888" }}>
+                  {_note.title}
+                </Typography>
+              }
+            />
+            {/* <ListItemText
+              classes={{ primary: "'your class'" }}
+              secondary={_note.title}
+              // secondary={removeHTMLTags(_note.body.substring(0, 30)) + "..."}
+            ></ListItemText> */}
           </div>
           <DeleteIcon
             onClick={() => this.deleteNote(_note)}
-            className={classes.deleteIcon}
+            className="deleteIcon"
           ></DeleteIcon>
         </ListItem>
       </div>
@@ -47,4 +57,4 @@ class SidebarItemComponent extends React.Component {
   };
 }
 
-export default withStyles(styles)(SidebarItemComponent);
+export default SidebarItemComponent;

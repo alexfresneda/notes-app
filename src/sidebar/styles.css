@@ -1,0 +1,113 @@
+/* // const styles = (theme) => ({
+//   // sidebarContainer {
+//   // if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+
+//   //   backgroundColor: "#000",
+//   //   color: "#fff",}
+//   // }
+
+//   // @media (prefers-color-scheme: light) {
+//   //   app-container {
+
+//   //   }
+//   // }
+//   root: {
+//     backgroundColor: theme.palette.background.paper,
+//     height: "calc(100% - 35px)",
+//     position: "absolute",
+//     left: "0",
+//     width: "300px",
+//     boxShadow: "0px 0px 2px black",
+//   },
+//   newNoteBtn: {
+//     width: "100%",
+//     height: "50px",
+//     // borderBottom: "1px solid black",
+//     borderRadius: "0px",
+//     // backgroundColor: "#2667C5",
+//     color: "#2667C5",
+//     "&:hover": {
+//       backgroundColor: "#1151AD",
+//       color: "white",
+//     },
+//   },
+//   sidebarContainer: {
+//     backgroundColor: "#f6f8f9",
+//     marginTop: "0px",
+//     width: "400px",
+//     height: "100%",
+//     boxSizing: "border-box",
+//     float: "left",
+//     overflowY: "scroll",
+//     overflowX: "hidden",
+//     opacity: "0",
+//     "&:hover": {
+//       opacity: "1",
+//     },
+//   },
+// });
+
+// export default styles;
+
+
+//------------------------------- */
+
+.root {
+  /* background-color: theme.palette.background.paper; */
+  height: calc(100% - 35px);
+  position: absolute;
+  left: 0;
+  width: 300px;
+  box-shadow: 0px 0px 2px black;
+}
+.newNoteBtn {
+  /* width: 100%; */
+  /* height: 50px; */
+  margin-left: 16px;
+  margin-top: 16px;
+  width: 64px;
+  /* // borderBottom: "1px solid black", */
+  border-radius: 4px;
+  /* background-color: #999;
+  color: #888; */
+  /* // "&:hover": {
+  //   backgroundColor: "#1151AD;
+  //   color: "white;
+  // }, */
+}
+.sidebarContainer {
+  margin-top: 0px;
+  width: 400px;
+  height: 100%;
+  box-sizing: border-box;
+  float: left;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  opacity: 1;
+}
+
+.sidebarContainer:hover {
+  opacity: 1;
+}
+
+@media (prefers-color-scheme: dark) {
+  .sidebarContainer {
+    color: #ccc;
+    background-color: #212121;
+  }
+
+  .newNoteBtn {
+    background-color: #666;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .sidebarContainer {
+    background-color: #f6f8f9;
+    color: #000;
+  }
+
+  .newNoteBtn {
+    background-color: #e3e7e9;
+  }
+}

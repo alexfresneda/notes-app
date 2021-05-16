@@ -1,6 +1,7 @@
 import React from "react";
 import { withStyles } from "@material-ui/core/styles";
-import styles from "./styles";
+import "./styles.css";
+// import styles from "./styles";
 import List from "@material-ui/core/List";
 import { Divider, Button } from "@material-ui/core";
 import SidebarItemComponent from "../sidebaritem/sidebaritem";
@@ -14,10 +15,10 @@ class SidebarComponent extends React.Component {
     const { notes, classes, selectedNoteIndex } = this.props;
     if (notes) {
       return (
-        <div className={classes.sidebarContainer}>
-          <Button onClick={this.newNote} className={classes.newNoteBtn}>
-            New Note
-          </Button>
+        <div className="sidebarContainer">
+          <div className="newNoteBtn">
+            <Button onClick={this.newNote}>add</Button>
+          </div>
           <List>
             {notes.map((_note, _index) => {
               return (
@@ -29,7 +30,7 @@ class SidebarComponent extends React.Component {
                     selectNote={this.selectNote}
                     deleteNote={this.deleteNote}
                   />
-                  <Divider />
+                  {/* <Divider /> */}
                 </div>
               );
             })}
@@ -54,4 +55,5 @@ class SidebarComponent extends React.Component {
   };
 }
 
-export default withStyles(styles)(SidebarComponent);
+export default SidebarComponent;
+// export default withStyles(styles)(SidebarComponent);

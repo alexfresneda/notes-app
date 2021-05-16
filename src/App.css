@@ -23,6 +23,7 @@ body {
   float: left;
 }
 .ql-container {
+  font-size: 16px;
   box-sizing: border-box;
   height: calc(100% - 42px);
   overflow-y: scroll;
@@ -33,13 +34,30 @@ body {
   border: none !important;
 }
 
+@media (prefers-color-scheme: dark) {
+  .app-container {
+    color: #ccc;
+    background-color: #111;
+  }
+  .MuiListItem-root.Mui-selected {
+    background-color: #292929 !important;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .app-container {
+    background-color: #fff;
+    color: #000;
+  }
+  .MuiListItem-root.Mui-selected {
+    background-color: #e3e7e9 !important;
+  }
+}
+
 .ql-toolbar.ql-snow {
   border: none !important;
 }
 
-.MuiListItem-root.Mui-selected {
-  background-color: #d4d8e8 !important;
-}
 .no-note-selected {
   font-size: 48px;
   position: absolute;
